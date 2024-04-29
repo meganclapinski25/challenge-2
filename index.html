@@ -6,10 +6,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-    .main {
+    
+	.main {
         display: block;
     }
-    article {
+	@media only screen and (min-width:601px){
+		article{display: flex; background-color: aqua; margin: 10px;}
+		.main{display: grid;grid-template-columns: auto auto;}
+		.image{width: 200px; padding: 1rem;}
+		.features{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+		.features-list{
+			justify-content: flex-end; 
+            display: flex;
+            flex-direction: row;     
+            padding: .5rem;
+		
+		}
+		.features-list div{
+			padding:.5rem;
+			background-color: rgba(255, 255, 255, 0.7); 
+			
+		}
+		
+
+	}
+    
+	@media only screen and (max-width: 600px) {
+		article {
         margin-bottom: 20px;
 		background-color: aqua;
 		padding: 1rem;
@@ -33,7 +60,7 @@
 		border-radius: 25px;
 		background-color: blanchedalmond;
 	}
-	
+}
 
 	</style>
 </head>
